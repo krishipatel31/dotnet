@@ -1,0 +1,17 @@
+﻿@page "/databindingdemo"
+@using EmployeeManagement.model
+@inherits DatabindingDemoBase
+
+<h1>Two Way Data Binding </h1>
+<hr/>
+
+<b>
+    Description
+</b>
+<div>
+    <textarea @bind="Description" @bind:event="oniput.
+ " style="width:500px" />
+</div>
+<div>
+    Count :@Description.Length
+</div>

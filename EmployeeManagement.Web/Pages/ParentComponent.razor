@@ -1,0 +1,18 @@
+﻿<button class="btn btn-primary" @onclick="IncrementCounter">
+    Increment Counter
+</button>
+
+<h1>Parent Component Text - @Counter</h1>
+
+<CascadingValue Value="@Counter" Name="Counter" IsFixed="false">
+    <ChildComponent></ChildComponent>
+</CascadingValue>
+
+@code {
+    public int Counter { get; set; } = 0;
+
+    private void IncrementCounter()
+    {
+        Counter = Counter + 1;
+    }
+}
